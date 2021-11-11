@@ -1,4 +1,6 @@
-import lib.deck as d
+import lib.deck as deckfile
 
 def test_create_deck():
-    assert d.create_deck() == d.deck
+    subject = deckfile.Deck()
+    print(subject.deck)
+    assert subject.create_deck() == subject.deck # Hard code the deck in array, put it in helper.
