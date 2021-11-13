@@ -1,3 +1,5 @@
+import lib.cards as cardFile
+
 class Deck:
 
     def __init__(self):
@@ -9,5 +11,5 @@ class Deck:
         ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
         for suit in suits:
             for rank in ranks:
-                deck.append(rank + ' ' + suit)       
+                deck.append(cardFile.Cards(rank, suit))       
         return deck

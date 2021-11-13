@@ -1,6 +1,6 @@
-import lib.deck as deckfile
+import lib.deck as deckFile
 
 def test_create_deck():
-    subject = deckfile.Deck()
+    subject = deckFile.Deck()
     print(subject.deck)
-    assert subject.create_deck() == subject.deck # Hard code the deck in array, put it in helper.
+    assert subject.create_deck() == # Create a mock array of all 52 objects
