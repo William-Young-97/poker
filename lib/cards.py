@@ -4,3 +4,4 @@ class Cards:
         self.rank = rank
         self.suit = suit
         self.name = rank + " of " + suit
+
