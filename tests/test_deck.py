@@ -1,7 +1,8 @@
-import lib.deck as deckFile
+import lib
 from unittest import mock
 
 
 def test_deck_objects():
-    deck = deckFile.Deck()
+    deck = lib.Deck()
+    print(deck.deck)
     # assert deck.create_deck() = mock

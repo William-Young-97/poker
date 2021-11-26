@@ -1,12 +1,12 @@
-import lib.deck as deckFile
-import lib.cards as cardFile
-from lib.cards import Cards
+import sys
+sys.path.append('/home/will/.local/share/virtualenvs/poker-APIPhEKA/')
+import lib
 import random
 
 class Hand:
 
     def __init__(self):
-        self.deck = deckFile.Deck().deck
+        self.deck = lib.Deck().deck
         self.initial_cards = Hand.initial_draw(self, self.deck)
         self.names = Hand.view_cards(self)
 
