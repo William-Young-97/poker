@@ -15,7 +15,5 @@ class Hand:
         return initial_cards
     
     def view_cards(self):
-        names = [] # Make this a class variable
-        for card in self.initial_cards:
-            names.append(getattr(card, card.name))
-        print(names)
+        return [card.name for card in self.initial_cards]
+    
