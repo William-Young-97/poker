@@ -4,7 +4,7 @@
 - Cards will be instanised into the deck and can hold hidden values to help with rule sets.
 
 ## Deck
-- Deck is made up of cards and will be used to distribute them to players.
+- Deck is made up of cards and will be used to distribute them to players. Cards will be removed from the deck once this happens.
 
 ## Hand 
 - Hand will be be made up of cards that can be drawn.
@@ -24,3 +24,7 @@
 
 # Instantiating the cards
 - Cards come with a rank and suit argument which is stored in the name instance variable.
+
+# The hand class
+- Instantiates with 2 random cards that are selected and removed from the deck.
+- Displays the names of each card to the user.

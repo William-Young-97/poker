@@ -18,5 +18,5 @@ python3 -m pytest
 ```
 python3 -m pytest -s 
 ```
-- Runs tests with print statments.S
+- Runs tests with print statments.
 
