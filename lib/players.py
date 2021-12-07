@@ -6,3 +6,5 @@ class Player:
         self.hand = lib.Hand(deck)
         self.name = name
     
+    # Print player hand on init
+    
