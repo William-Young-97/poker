@@ -6,14 +6,16 @@ class Controller:
     def __init__(self):
         self.deck_instance = lib.Deck()
         self.deck = self.deck_instance.deck
-        self.view_deck = self.deck_instance.names
+        self.show_deck = self.deck_instance.names
         self.players = []
 
     def player_init(self, name):
-        self.players.append(lib.Player(self.deck, name))
-    
+        self.players.append(lib.Player(self.deck, name)) 
     
     # helper methods
+    def view_deck(self):
+        return [card.name for card in self.deck]
+
     def view_players(self):
         return([player.name for player in self.players])
     

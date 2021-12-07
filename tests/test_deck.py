@@ -3,9 +3,12 @@ from unittest import mock
 
 deck = lib.Deck()
 
-# Change this to len(52) and 
-@mock.patch('lib.deck.Deck.create_deck', return_value="A deck of cards") # Mock each card object instead?
-def test_deck_objects(mock_cards):
-    assert deck.create_deck() == "A deck of cards"
+# Change this to len(52) and len(50)
+# @mock.patch('lib.deck.Deck.create_deck', return_value="A deck of cards") # Mock each card object instead?
+def test_deck_objects():
+    assert len(deck.deck) == 52
+    # assert all objects card instances of Card
 
-# def test_card_is_removed_when_drawn():
+def test_card_del():
+    lib.Player(deck.deck, "Bob")
+    assert len(deck.deck) == 50

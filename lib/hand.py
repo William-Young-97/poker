@@ -12,12 +12,10 @@ class Hand:
 
     def initial_draw(self, deck):
         initial_cards = deck[:self.CARDS_DRAWN]
-        self.__del_from_deck
+        for card in range(self.CARDS_DRAWN): # srp refactor?
+            del deck[0]
         return initial_cards
     
     def view_cards(self):
         return [card.name for card in self.initial_cards]
     
-    def __del_from_deck(self, deck):
-        for card in range(self.CARDS_DRAWN):
-            del deck[0]
