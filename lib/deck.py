@@ -14,12 +14,11 @@ class Deck:
         for suit in suits:
             for rank in ranks:
                 deck.append(lib.Cards(rank, suit))
-        self.shuffle_deck(deck)       
+        self.__shuffle_deck(deck)       
         return deck
     
     def view_cards(self):
-        print([card.name for card in self.deck])
         return [card.name for card in self.deck]
     
-    def shuffle_deck(self, deck):
+    def __shuffle_deck(self, deck):
         random.shuffle(deck)

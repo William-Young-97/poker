@@ -1,15 +1,22 @@
 import lib
 
 # Have created main to try and stop hand from genertating with deck
-class Main: 
+class Controller: 
+
     def __init__(self):
-        self.deck = lib.Deck().deck
+        self.deck_instance = lib.Deck()
+        self.deck = self.deck_instance.deck
+        self.view_deck = self.deck_instance.names
         self.players = []
-        self.names = self.view_players
 
     def player_init(self, name):
         self.players.append(lib.Player(self.deck, name))
     
+    
+    # helper methods
     def view_players(self):
-        print([player.name for player in self.players])
         return([player.name for player in self.players])
+    
+    def view_hands(self):
+        return([player.hand.names for player in self.players])
+    

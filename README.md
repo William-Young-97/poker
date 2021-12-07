@@ -20,3 +20,7 @@ python3 -m pytest -s
 ```
 - Runs tests with print statments.
 
+## Things to remember in python/shell
+
+- Include () when calling functions to denote them in shell.
+- Use indexing on the player list to access each player and their attrs.
