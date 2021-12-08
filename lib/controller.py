@@ -8,6 +8,7 @@ class Controller:
         self.deck = self.deck_instance.deck
         self.show_deck = self.deck_instance.names
         self.players = []
+        self.table = lib.Table(self.deck)
 
     def player_init(self, name):
         self.players.append(lib.Player(self.deck, name)) 
