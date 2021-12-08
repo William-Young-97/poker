@@ -28,3 +28,19 @@
 # The hand class
 - Instantiates with 2 random cards that are selected and removed from the deck.
 - Displays the names of each card to the user.
+
+# Table class
+- Funtions similarily to the hand class
+- When the methods are called the correct number of cards are displayed on the table.
+
+# To do
+
+## Clean up
+- Write tests for controller. 
+- Create a helper method class
+- General refactoring
+
+## Next for mvp
+- Pot/player class interactions. They exist and players can bet chips.
+- Could use arbitary type in bet system to start. 
+- 1500 chips in per player.

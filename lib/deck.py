@@ -17,6 +17,8 @@ class Deck:
         self.__shuffle_deck(deck)       
         return deck
     
+    # Could definitely be refactored into a helper method
+    # Return view_cards on flop, turn, river
     def view_cards(self):
         return [card.name for card in self.deck]
     
