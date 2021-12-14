@@ -1,7 +1,8 @@
 import lib
 
 deck = lib.Deck().deck
-bob = lib.Player(deck, "Bob")
+table = lib.Table(deck)
+bob = lib.Player(deck, table, "Bob")
 
 def test_draw():
     assert len(bob.hand.initial_cards) == 2 

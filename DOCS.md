@@ -44,3 +44,11 @@
 - Pot/player class interactions. They exist and players can bet chips.
 - Could use arbitary type in bet system to start. 
 - 1500 chips in per player.
+
+## stretch goals
+- Create multiple chip objects.
+- Add opponents whose playstyle you can adjust(Start simple, but end goal an ai)
+- Brainstorm other features used to help train you in good poker play.
+
+## What is this app?
+- Poker Trainer is geared towards training people to be better in poker.

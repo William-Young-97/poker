@@ -1,14 +1,15 @@
 import lib
 
-deck = lib.Deck()
+deck = lib.Deck().deck
+table = lib.Table(deck)
 
 def test_n_of_deck_objects():
-    assert len(deck.deck) == 52
+    assert len(deck) == 52
 
 def test_card_instances():
-    for card in deck.deck:
+    for card in deck:
         isinstance(card, lib.Cards)
 
 def test_card_del():
-    lib.Player(deck.deck, "Bob")
-    assert len(deck.deck) == 50
+    lib.Player(deck, table, "Bob")
+    assert len(deck) == 50

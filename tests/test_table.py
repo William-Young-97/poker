@@ -2,6 +2,8 @@ import lib
 
 deck = lib.Deck().deck
 table = lib.Table(deck)
+bob = lib.Player(deck, table, "Bob")
+
 
 
 def test_flop_amount():

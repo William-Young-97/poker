@@ -11,7 +11,7 @@ class Controller:
         self.table = lib.Table(self.deck)
 
     def player_init(self, name):
-        self.players.append(lib.Player(self.deck, name)) 
+        self.players.append(lib.Player(self.deck, self.table, name)) 
     
     def show_flop(self, deck):
         self.table.flop(deck)

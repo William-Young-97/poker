@@ -7,6 +7,7 @@ class Table:
         self.names = self.view_cards()
         self.pot = 0
         self.side_pot = 0
+        self.deck = deck
 
     def flop(self, deck):
         self.table = deck[:self.FLOP]
