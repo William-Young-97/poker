@@ -5,5 +5,5 @@ table = lib.Table(deck)
 bob = lib.Player(deck, table, "Bob")
 
 def test_bet():
-    bob.bet(420)
+    bob.bet()
     assert table.pot == 420
