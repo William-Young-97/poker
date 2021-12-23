@@ -1,7 +1,6 @@
 import lib
 
 class Run:
-    w = lib.Game()
 
     def run(self):
         new = lib.Game()

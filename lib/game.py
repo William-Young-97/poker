@@ -8,7 +8,7 @@ class Game:
         self.show_deck = self.deck_instance.names
         self.players = []
         self.table = lib.Table(self.deck)
-        self.round_winner = self.determine_winner()
+        # self.round_winner = self.determine_winner()
 
     def player_init(self):
         print("Please type your name")
@@ -17,6 +17,7 @@ class Game:
     
     def player_actions(self):
         for player in self.players:
+            self.check_for_fold()
             print("Type bet, check or fold.")
             print("Please pick an action " + player.name + ":")
             choice = input().lower()
@@ -31,18 +32,26 @@ class Game:
 
     def show_flop(self, deck):
         self.table.flop(deck)
+        print(self.table.view_cards())
         return self.table.view_cards()
     
     def turn_river(self, deck):
         self.table.turn_and_river(deck)
+        print(self.table.view_cards())
         return self.table.view_cards()
     
     def input_error(self):
         raise Exception("Please type: bet, check or fold")
     
-    def determine_winner(self): # Change fold to remove players from array
-        if len(self.players) == 1:
-            print("{self.players[0].name} wins {self.table.pot}!")
+    def check_for_fold(self):
+        if [player.fold for player in self.players] == True: # Maybe abandon this fopr arrays for easier implementation. This is worth a bit more thought tho.
+            pass
+
+    
+    # def determine_winner(self): # Change fold to remove players from array
+    #         print("{self.players[0].name} wins {self.table.pot}!")
+        # else:
+          #  a function that searches though the players hands and calculates their value.    
 
 
     # helper methods
