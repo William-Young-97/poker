@@ -1,7 +1,3 @@
-# import sys
-# sys.path.append('/home/will/.local/share/virtualenvs/poker-APIPhEKA/')
-
-
 class Hand:
 
     CARDS_DRAWN = 2

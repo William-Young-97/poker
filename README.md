@@ -24,3 +24,5 @@ python3 -m pytest -s
 
 - Include () when calling functions to denote them in shell.
 - Use indexing on the player list to access each player and their attrs.
+
+## Add in some class diagrams

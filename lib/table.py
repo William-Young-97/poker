@@ -1,8 +1,6 @@
 class Table:
 
     FLOP = 3
-    # pot = 0
-    # side_pot = 0
 
     def __init__(self, deck):
         self.table = []
