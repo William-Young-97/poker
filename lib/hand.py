@@ -13,6 +13,5 @@ class Hand:
         return initial_cards
     
     def view_cards(self):
-        print([card.name for card in self.initial_cards])
         return [card.name for card in self.initial_cards]
     

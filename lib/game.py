@@ -8,6 +8,7 @@ class Game:
         self.show_deck = self.deck_instance.names
         self.players = []
         self.table = lib.Table(self.deck)
+        self.out = []
         # self.round_winner = self.determine_winner()
 
     def player_init(self):
@@ -18,8 +19,8 @@ class Game:
     def player_actions(self):
         for player in self.players:
             self.check_for_fold()
-            print("Type bet, check or fold.")
-            print("Please pick an action " + player.name + ":")
+            self.last_man_winner()
+            self.__print_statements(player)
             choice = input().lower()
             if choice == "bet":
                 player.bet()
@@ -32,6 +33,7 @@ class Game:
 
     def show_flop(self, deck):
         self.table.flop(deck)
+        print("The flop is:")
         print(self.table.view_cards())
         return self.table.view_cards()
     
@@ -44,10 +46,34 @@ class Game:
         raise Exception("Please type: bet, check or fold")
     
     def check_for_fold(self):
-        if [player.fold for player in self.players] == True: # Maybe abandon this fopr arrays for easier implementation. This is worth a bit more thought tho.
-            pass
-
+        for player in self.players: # Maybe abandon this fopr arrays for easier implementation. This is worth a bit more thought tho.
+            if len(player.hand.initial_cards) == 0:
+                self.out.append(player)
+                self.players.remove(player)
     
+    def __print_statements(self, player):
+        print(player.name + "'s hand:")
+        print(player.hand.view_cards())
+        print(player.name + "'s chips: " + str(player.chips))
+        print("Type bet, check or fold.")
+        print("Please pick an action " + player.name + ":")
+
+    def __reset_round(self):
+        print("NEW ROUND!")
+        self.deck_instance = lib.Deck()
+        for player in self.out:
+            self.players.append(player)
+            self.out.remove(player)
+            player.hand = lib.Hand(self.deck)
+    
+    def last_man_winner(self):
+        if len(self.players) == 1:
+            self.players[0].chips += self.table.pot
+            self.table.pot = 0
+            print(self.players[0].name + " wins!")
+            self.__reset_round()
+            
+
     # def determine_winner(self): # Change fold to remove players from array
     #         print("{self.players[0].name} wins {self.table.pot}!")
         # else:

@@ -7,7 +7,6 @@ class Player:
         self.name = name
         self.table = table
         self.chips = 1500
-        self.fold = False
     
     def bet(self): # eventually will need reraise function where it loops again  
         print("Please input your bet")
@@ -19,7 +18,8 @@ class Player:
         pass
     
     def fold(self): # Fold needs to also remove the player from the rotation
-        self.fold = True
-    
+        for card in range(2): # srp refactor?
+            del self.hand.initial_cards[0]
+        pass
 
     
