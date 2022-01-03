@@ -41,9 +41,14 @@
 - General refactoring
 
 ## Next for mvp
-- Pot/player class interactions. They exist and players can bet chips.
-- Could use arbitary type in bet system to start. 
-- 1500 chips in per player.
+- Add in score comparisons of hands to determine a winner
+
+## To complete poker
+- Starting player rotates by 1 each new round
+- Players add an ante to the pot at each new round
+- Players can re-raise up to 3 times
+- Players cannot check if they haven't matched this rounds bets
+-   
 
 ## stretch goals
 - Create multiple chip objects.

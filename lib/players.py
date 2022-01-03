@@ -17,9 +17,11 @@ class Player:
     def check(self): # Check will become unavailable if the prev bet was a raise
         pass
     
-    def fold(self): # Fold needs to also remove the player from the rotation
+    def fold(self):
         for card in range(2): # srp refactor?
             del self.hand.initial_cards[0]
         pass
+
+    
 
     
