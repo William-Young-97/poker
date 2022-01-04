@@ -12,6 +12,11 @@ class Hand:
             del deck[0]
         return initial_cards
     
+    # Helper methods
+    
     def view_cards(self):
         return [card.name for card in self.initial_cards]
+    
+    def view_card_values(self):
+        return [card.value for card in self.initial_cards]
     

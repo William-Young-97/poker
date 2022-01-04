@@ -9,7 +9,7 @@ class Game:
         self.players = []
         self.table = lib.Table(self.deck)
         self.out = []
-        self.score = lib.Score()
+        self.score = lib.Score(self.players, self.table.table)
         # self.round_winner = self.determine_winner()
 
     def player_init(self):
@@ -91,8 +91,12 @@ class Game:
         return [card.name for card in self.deck]
 
     def view_players(self):
-        return([player.name for player in self.players])
+        return [player.name for player in self.players]
     
     def view_hands(self):
-        return([player.hand.names for player in self.players])
+        return [player.hand.names for player in self.players]
+    
+    def get_card_values(self):
+        for player in self.players:
+            print(player.hand.view_card_values()) # Values are being added? It's messing up in deck gen most likely
     
