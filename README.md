@@ -11,11 +11,17 @@ pipenv shell
 - Enters the correct python environment for testing.
 
 ```
+pipenv install
+```
+- Installs pip lock file.
+
+```
 python3 -m pytest 
 ```
 - Runs tests.
 
 ```
-python3 -m pytest -s 
+python3 -s 
 ```
-- Runs tests with print statments.
+- Python shell with stdout.
+
