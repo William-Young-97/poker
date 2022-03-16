@@ -1,7 +1,7 @@
 # Goals
 - TDD in Python
 - Have fun building a game that I like in python .
-- Solidfy SOLID principles
+- Solidfy SOLID principles!
 
 # Useful commands
 
@@ -24,4 +24,5 @@ python3 -m pytest
 python3 -s 
 ```
 - Python shell with stdout.
+
 
